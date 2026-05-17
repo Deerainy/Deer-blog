@@ -1,0 +1,42 @@
+title: My Blog
+description: >-
+  一个关于生活、技术与艺术的个人空间
+baseurl: ""
+url: ""
+
+permalink: /:year/:month/:day/:title/
+
+paginate: 6
+paginate_path: "/page/:num/"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Blog Owner"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+background_image: "/assets/images/background.jpg"

@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<div class="home">
+  <section class="hero">
+    <h1 class="hero-title">{{ site.title }}</h1>
+    <p class="hero-subtitle">{{ site.description }}</p>
+  </section>
+
+  <section class="posts-section">
+    <h2 class="section-title">最新文章</h2>
+    <div class="posts-grid">
+      {% for post in paginator.posts %}
+      <article class="post-card">
+        <a href="{{ post.url | relative_url }}" class="post-card-link">
+          <div class="post-card-body">
+            <h3 class="post-card-title">{{ post.title }}</h3>
+            <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+            <div class="post-card-meta">
+              <time>{{ post.date | date: "%Y年%m月%d日" }}</time>
+              {% if post.categories.size > 0 %}
+              <span class="post-card-category">{{ post.categories | first }}</span>
+              {% endif %}
+            </div>
+          </div>
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+
+    {% if paginator.total_pages > 1 %}
+    <nav class="pagination">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-link prev">&larr; 上一页</a>
+      {% endif %}
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-link next">下一页 &rarr;</a>
+      {% endif %}
+    </nav>
+    {% endif %}
+  </section>
+</div>
