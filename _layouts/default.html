@@ -9,9 +9,11 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
   {% seo %}
 </head>
-<body>
+<body class="{% if page.layout == 'home' %}body-home{% else %}body-inner{% endif %}">
+  <div class="background-wallpaper"></div>
   <div class="background-overlay"></div>
 
+  {% if page.layout != 'home' %}
   <nav class="navbar">
     <div class="nav-container">
       <a class="nav-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
@@ -25,17 +27,20 @@
       </ul>
     </div>
   </nav>
+  {% endif %}
 
   <main class="main-content">
     {{ content }}
   </main>
 
+  {% if page.layout != 'home' %}
   <footer class="site-footer">
     <div class="footer-content">
       <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
       <p class="footer-subtitle">以文字记录生活，以代码构建世界</p>
     </div>
   </footer>
+  {% endif %}
 
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
