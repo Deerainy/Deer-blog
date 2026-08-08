@@ -6,6 +6,7 @@ import {
   tom,
   interests,
 } from '../data/about'
+import { getAssetUrl } from '../utils'
 import styles from './AboutPage.module.css'
 
 function AboutPage() {
@@ -24,7 +25,7 @@ function AboutPage() {
             ))}
           </div>
           <div className={styles.heroPortrait}>
-            <img src={aboutHero.portrait} alt="Portrait" className={styles.portraitImg} />
+            <img src={getAssetUrl(aboutHero.portrait)} alt="Portrait" className={styles.portraitImg} />
           </div>
         </section>
 
@@ -38,7 +39,7 @@ function AboutPage() {
                 className={`reveal ${styles.artCard} ${i === 0 ? styles.artCardWide : ''}`}
                 style={{ '--reveal-delay': `${i * 0.06}s` } as React.CSSProperties}
               >
-                <img src={a.image} alt={a.title} className={styles.artImg} />
+                <img src={getAssetUrl(a.image)} alt={a.title} className={styles.artImg} />
                 <div className={styles.artCaption}>
                   <h3 className={styles.artTitle}>
                     {a.title}
@@ -61,7 +62,7 @@ function AboutPage() {
                 className={`reveal ${styles.learnCard}`}
                 style={{ '--reveal-delay': `${i * 0.08}s` } as React.CSSProperties}
               >
-                <img src={l.image} alt={l.title} className={styles.learnImg} />
+                <img src={getAssetUrl(l.image)} alt={l.title} className={styles.learnImg} />
                 <div className={styles.learnBody}>
                   <span className={styles.learnStatus}>{l.status}</span>
                   <h3 className={styles.learnTitle}>{l.title}</h3>
@@ -81,7 +82,7 @@ function AboutPage() {
               <p className={styles.tomCaption}>{tom.caption}</p>
             </div>
             <div className={styles.tomPhotoWrap}>
-              <img src={tom.photo} alt={tom.name} className={styles.tomPhoto} />
+              <img src={getAssetUrl(tom.photo)} alt={tom.name} className={styles.tomPhoto} />
             </div>
           </div>
         </section>

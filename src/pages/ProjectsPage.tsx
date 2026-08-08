@@ -1,9 +1,10 @@
 import type { CSSProperties } from 'react'
-import { Link } from 'react-router-dom'
+
 import { Card, Tag } from 'animal-island-ui'
 import type { TagColor } from 'animal-island-ui'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { projects } from '../data/projects'
+import { getAssetUrl } from '../utils'
 import styles from './ProjectsPage.module.css'
 
 const TAG_COLORS: TagColor[] = ['app-teal', 'app-blue', 'app-yellow', 'app-pink', 'app-green', 'purple']
@@ -15,7 +16,7 @@ function ProjectsPage() {
     <div className={styles.page}>
       <header className={`reveal ${styles.head}`}>
         <span className="section__eyebrow">
-          <img src="/nook-phone/Property-Recipes.svg" alt="" className="section__eyebrow__svg" aria-hidden="true" /> things i&rsquo;ve built
+          <img src={getAssetUrl('/nook-phone/Property-Recipes.svg')} alt="" className="section__eyebrow__svg" aria-hidden="true" /> things i&rsquo;ve built
         </span>
         <h1 className={styles.title}>Projects</h1>
         <p className={styles.lede}>

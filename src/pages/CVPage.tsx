@@ -6,6 +6,7 @@ import { profile, aboutParagraphs, education } from '../data/profile'
 import { experiences } from '../data/experience'
 import { projects } from '../data/projects'
 import { skillGroups, awards } from '../data/cv'
+import { getAssetUrl } from '../utils'
 import styles from './CVPage.module.css'
 
 const SKILL_TAG_COLORS: TagColor[] = ['app-teal', 'app-blue', 'app-yellow', 'app-green', 'app-pink', 'purple']
@@ -33,7 +34,7 @@ function CVPage() {
         <aside className={`reveal ${styles.sidebar}`}>
           {profile.avatarImage ? (
             <div className={styles.avatarImgWrap}>
-              <img src={profile.avatarImage} alt={`${profile.displayName} avatar`} className={styles.avatarImg} />
+              <img src={getAssetUrl(profile.avatarImage)} alt={`${profile.displayName} avatar`} className={styles.avatarImg} />
             </div>
           ) : (
             <div className={styles.avatar} aria-hidden="true">
@@ -47,7 +48,7 @@ function CVPage() {
           </div>
           <div className={styles.contact}>
             <div className={styles.contactEmails}>
-              <img src="/nook-phone/Property-Chat.svg" alt="" className={styles.contactSvg} aria-hidden="true" />
+              <img src={getAssetUrl('/nook-phone/Property-Chat.svg')} alt="" className={styles.contactSvg} aria-hidden="true" />
               <div className={styles.emailList}>
                 {profile.emails.map((email) => (
                   <a key={email} className={styles.contactEmailLink} href={`mailto:${email}`}>
@@ -57,7 +58,7 @@ function CVPage() {
               </div>
             </div>
             <a className={styles.contactItem} href={profile.github} target="_blank" rel="noreferrer">
-              <img src="/nook-phone/nook1.svg" alt="" className={styles.contactSvg} aria-hidden="true" />
+              <img src={getAssetUrl('/nook-phone/nook1.svg')} alt="" className={styles.contactSvg} aria-hidden="true" />
               <span>GitHub</span>
             </a>
           </div>
@@ -176,7 +177,7 @@ function CVPage() {
                           rel="noreferrer"
                           aria-label={`${p.title} on GitHub`}
                         >
-                          <img src="/nook-phone/nook1.svg" alt="" className={styles.projectLinkSvg} aria-hidden="true" />
+                          <img src={getAssetUrl('/nook-phone/nook1.svg')} alt="" className={styles.projectLinkSvg} aria-hidden="true" />
                           <span>GitHub</span>
                         </a>
                       )}

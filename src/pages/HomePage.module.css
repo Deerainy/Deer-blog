@@ -10,9 +10,6 @@
   display: flex;
   flex-direction: column;
   background-color: #e8f2dd;
-  background-image:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.04) 100%),
-    url('/home_bg.webp');
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;

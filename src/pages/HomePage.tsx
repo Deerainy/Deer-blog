@@ -1,12 +1,18 @@
+import type { CSSProperties } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Button, Footer, Title } from 'animal-island-ui'
+import { getAssetUrl } from '../utils'
 import styles from './HomePage.module.css'
 
 function HomePage() {
   const navigate = useNavigate()
 
+  const homeStyle: CSSProperties = {
+    backgroundImage: `linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.04) 100%), url('${getAssetUrl('/home_bg.webp')}')`,
+  }
+
   return (
-    <div className={styles.home}>
+    <div className={styles.home} style={homeStyle}>
       <main className={styles.stage}>
         <div className={styles.textCol}>
           <Title color="app-green" size="small" className={`${styles.badge} ${styles.in}`}>
@@ -39,7 +45,7 @@ function HomePage() {
 
         {/* 豆狸 (Tanuki twins) — the mascot of animal island, from the repo */}
         <div className={`${styles.iconCol} ${styles.in}`} style={{ animationDelay: '0.15s' }}>
-          <img src="/animal_icon.png" alt="Animal island mascots" className={styles.heroIcon} />
+          <img src={getAssetUrl('/animal_icon.png')} alt="Animal island mascots" className={styles.heroIcon} />
         </div>
       </main>
 

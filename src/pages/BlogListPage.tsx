@@ -9,6 +9,7 @@ import {
   CATEGORY_COLORS,
 } from '../data/blog'
 import type { BlogCategory } from '../data/blog'
+import { getAssetUrl } from '../utils'
 import styles from './BlogListPage.module.css'
 
 const CATEGORIES: (BlogCategory | 'All')[] = ['All', 'Research', 'Build', 'Life', 'Travel']
@@ -26,7 +27,7 @@ function BlogListPage() {
     <div className={styles.page}>
       <header className={`reveal ${styles.head}`}>
         <span className="section__eyebrow">
-          <img src="/nook-phone/Property-Chat.svg" alt="" className="section__eyebrow__svg" aria-hidden="true" /> notes
+          <img src={getAssetUrl('/nook-phone/Property-Chat.svg')} alt="" className="section__eyebrow__svg" aria-hidden="true" /> notes
         </span>
         <h1 className={styles.title}>From my little corner</h1>
         <p className={styles.lede}>
@@ -78,7 +79,7 @@ function BlogListPage() {
 
         {visible.length === 0 && (
           <div className={`reveal ${styles.empty}`}>
-            <img src="/nook-phone/Property-Helicopter.svg" alt="" className={styles.emptyEmoji} aria-hidden="true" />
+            <img src={getAssetUrl('/nook-phone/Property-Helicopter.svg')} alt="" className={styles.emptyEmoji} aria-hidden="true" />
             <p className={styles.emptyTitle}>Notes coming soon</p>
             <p className={styles.emptyText}>
               I&rsquo;m still setting up this little corner. Research thoughts, build logs,
