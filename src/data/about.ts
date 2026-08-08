@@ -10,7 +10,6 @@ export interface AboutHero {
 
 export interface ArtWork {
   title: string
-  level?: string
   image: string
   description: string
 }
@@ -33,16 +32,15 @@ export const aboutHero: AboutHero = {
 export const artWorks: ArtWork[] = [
   {
     title: 'Brush Calligraphy',
-    level: 'Level 10',
     image: '/calligraphy.jpg',
     description:
-      "Started with pen calligraphy at level 9, then fell in love with brush. Calligraphy taught me patience — every stroke is a decision, and every decision is a practice.",
+      'I love brush calligraphy — every stroke is a decision, and every decision is a practice.',
   },
   {
     title: 'Painting',
     image: '/painting.jpg',
     description:
-      'Watercolor and ink illustrations. Occasionally make little merch — the Dungeon Deerainy plate above is one of my favorites.',
+      'Watercolor and ink illustrations. I love the quiet moments of mixing colors and letting them flow.',
   },
   {
     title: 'Sketching',

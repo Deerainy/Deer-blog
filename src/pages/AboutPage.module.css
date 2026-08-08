@@ -76,7 +76,7 @@
 .section { width: 100%; }
 .artGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 .artCard {
@@ -94,10 +94,6 @@
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
-.artCardWide {
-  grid-column: span 2;
-  flex-direction: row;
-}
 .artImg {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -105,41 +101,21 @@
   display: block;
   background: #f0ece4;
 }
-.artCardWide .artImg {
-  width: 55%;
-  aspect-ratio: auto;
-  min-height: 260px;
-}
 .artCaption {
   padding: 1.25rem 1.4rem 1.4rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.artCardWide .artCaption {
-  flex: 1;
-  padding: 1.5rem 1.75rem;
-  justify-content: center;
-}
 .artTitle {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 900;
   color: var(--animal-text-color);
   margin: 0;
-  display: flex;
-  align-items: baseline;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-}
-.artLevel {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--animal-primary-color-active);
-  letter-spacing: 0.04em;
 }
 .artDesc {
-  font-size: 0.92rem;
-  line-height: 1.65;
+  font-size: 0.88rem;
+  line-height: 1.6;
   color: var(--animal-text-color-secondary);
   margin: 0;
 }
@@ -312,16 +288,7 @@
     margin: 0 auto;
     order: -1;
   }
-  .artGrid { grid-template-columns: 1fr; }
-  .artCardWide {
-    grid-column: span 1;
-    flex-direction: column;
-  }
-  .artCardWide .artImg {
-    width: 100%;
-    min-height: 0;
-    aspect-ratio: 4 / 3;
-  }
+  .artGrid { grid-template-columns: repeat(2, 1fr); }
   .learnGrid { grid-template-columns: 1fr; }
   .learnCard { grid-template-columns: 140px 1fr; }
   .tomBlock {
@@ -338,6 +305,7 @@
 }
 
 @media (max-width: 520px) {
+  .artGrid { grid-template-columns: 1fr; }
   .learnCard { grid-template-columns: 1fr; }
   .learnImg { aspect-ratio: 16 / 9; }
 }

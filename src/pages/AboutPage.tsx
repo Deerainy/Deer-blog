@@ -36,15 +36,12 @@ function AboutPage() {
             {artWorks.map((a, i) => (
               <article
                 key={a.title}
-                className={`reveal ${styles.artCard} ${i === 0 ? styles.artCardWide : ''}`}
+                className={`reveal ${styles.artCard}`}
                 style={{ '--reveal-delay': `${i * 0.06}s` } as React.CSSProperties}
               >
                 <img src={getAssetUrl(a.image)} alt={a.title} className={styles.artImg} />
                 <div className={styles.artCaption}>
-                  <h3 className={styles.artTitle}>
-                    {a.title}
-                    {a.level && <span className={styles.artLevel}>· {a.level}</span>}
-                  </h3>
+                  <h3 className={styles.artTitle}>{a.title}</h3>
                   <p className={styles.artDesc}>{a.description}</p>
                 </div>
               </article>
