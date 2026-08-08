@@ -24,7 +24,7 @@ export const profile: ProfileData = {
   profession: 'Software Engineer',
   affiliation: 'HKUST(GZ)',
   avatarText: '',
-  avatarImage: '/avatar.jpg',
+  avatarImage: '/avatar.png',
   tags: ['Software Engineer', 'AI / Agents', 'HCI', 'Graph Learning'],
   emails: [
     'yuxinlu0410@gmail.com',
