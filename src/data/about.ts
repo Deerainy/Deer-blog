@@ -40,13 +40,13 @@ export const artWorks: ArtWork[] = [
     title: 'Painting',
     image: '/painting.jpg',
     description:
-      'Watercolor and ink illustrations. I love the quiet moments of mixing colors and letting them flow.',
+      'I love original paintings and black-and-white line art comics — there is something so honest about a clean line.',
   },
   {
     title: 'Sketching',
     image: '/sketch.jpg',
     description:
-      'Sketching helps me see the structure of things. I usually carry a small sketchbook when I travel.',
+      "I love the feeling of clean lines and structural form — there's a quiet satisfaction in how a few strokes can bring something to life.",
   },
 ]
 
@@ -83,7 +83,7 @@ export const interests: InterestItem[] = [
   {
     emoji: '🎬',
     title: 'Films',
-    text: "I'm a genuine film lover. Some I love: 八仙, 给阿嬷的情书, La La Land, Howl's Moving Castle, Interstellar, Pride & Prejudice, The Grand Budapest Hotel, Spirited Away, Amélie, Inception, Before Sunrise, The Lord of the Rings, Call Me by Your Name.",
+    text: "I'm a genuine film lover. Some I love: 八仙, 给阿嬷的情书, La La Land, Howl's Moving Castle, Minions, Forever Young (无问西东).",
   },
   {
     emoji: '📺',
@@ -93,7 +93,7 @@ export const interests: InterestItem[] = [
   {
     emoji: '🎌',
     title: 'Anime & Manga',
-    text: 'Follow ongoing series, occasionally collect small merch.',
+    text: "I've loved Japanese anime and manga since I was little — especially drawn to strong storytelling and surreal stream-of-consciousness narratives.",
   },
   {
     emoji: '🎭',
@@ -103,7 +103,7 @@ export const interests: InterestItem[] = [
   {
     emoji: '🚶',
     title: 'Travel & City Walk',
-    text: 'Some of my best ideas come while walking in an unfamiliar neighborhood.',
+    text: "I love hiking and long walks through everyday local streets — there's nothing like feeling the rhythm of a place with my own feet.",
   },
   {
     emoji: '🎮',
