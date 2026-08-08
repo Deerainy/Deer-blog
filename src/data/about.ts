@@ -70,7 +70,7 @@ export const learning: LearningItem[] = [
 export const tom = {
   name: 'Tom',
   photo: '/tom.jpg',
-  caption: 'Our little cat. Spends most of the day on the cat tree, judging the household.',
+  caption: 'Our little mischief. A bit of a troublemaker who loves sleeping in bed all day long.',
 }
 
 export interface InterestItem {
